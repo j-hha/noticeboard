@@ -75,4 +75,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #SESSIONS!
+  # Be sure to restart your server when you modify this file.
+  config.session_store :cookie_store, key: '_your_app_session'
 end

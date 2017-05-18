@@ -16,10 +16,11 @@
 # end
 Rails.application.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:8000'
+    origins '*'
 
     resource '*',
       headers: :any,
-      methods: [:get, :options, :head]
+      credentials: true,
+      methods: [:get, :post, :put, :delete, :options, :head]
   end
 end
